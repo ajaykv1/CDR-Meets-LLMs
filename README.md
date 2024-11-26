@@ -83,7 +83,7 @@ This project uses the following nine command-line arguments. When running `run.p
 
 ### Example Usage
 
-Let's say you want to use Books as the source domain and Mocies as the target domain. 
+Let's say you want to use **`Books`** as the source domain and **`Movies`** as the target domain. 
 
 To evaluate a GPT model on this domain pair in the ranking task with high context prompt and target domain behavior injection, run the following command:
 
