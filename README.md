@@ -95,8 +95,8 @@ To evaluate a GPT model on this domain pair in the ranking task with high contex
 To evaluate a LLama model on this domain pair in the rating task with medium context prompt and no target domain behavior injection, run the following command:
 
 - `python3 run.py --data_info=amazon --source=Books --target=Movies_and_TV --neg_samples=20 --k_shot=25 --model_name=8B --task=rating --injection=no --prompt_context=medium`
-- The `neg_samples` argument is reuired, but you don't have to worry about it for the rating prediction task. The code will not use the value you put for this argument, and will ignore it for rating. But, it is required, so just put some number for this
-- to evaluate rating prediction in other ways, and change `--injection` or `prompt_context` to see how it performs in different types of prompt situation.
+- The `neg_samples` argument is required, but you don't have to worry about it for the rating prediction task. The code will not use the value you put for this argument, and will ignore it for rating. But, it is required, so just put some number for this.
+- To evaluate rating prediction in other types of prompts, you can change `--injection` or `prompt_context` to see how it performs in different types of prompt situation.
 - The `k_shot` argument is used to create training data, but for this study, we don't need that functionality. So, keep this value at 25 for faster pre-processing.
 - You can change the `--model_name` to either of the models (GPT or LLama) for the rating task from the values in the command line arguments section. 
 
