@@ -31,6 +31,54 @@ You will see three main folders and files in this project repository:
      - Once you create the virual enviroment, activate it with this command: `source llm_environment/bin/activate`.
      - Finally, run this command to download all the neccessary libraries required: `pip install -r requirements.txt`
 
-## Running the Code
+## Instructions on Running the Code
 
+The file you need to pay attention to for running the code is `run.py`. This file is all you need to get results for LLMs and their performance in CDR.  
 
+### Command-Line Arguments
+
+This project uses the following nine command-line arguments. When running `run.py`, you will need to specify values for each of these command line arguments to get the desired outputs:
+
+1. **`--data_info`** (Required)  
+   - Description: Specify the dataset's source (e.g., `amazon`).  
+   - Example: `--data_info=amazon`
+
+2. **`--source`** (Required)  
+   - Description: Name of the dataset to process as the source domain.  
+   - Example: `--source=Movies_and_TV`
+
+3. **`--target`** (Required)  
+   - Description: Name of the dataset to process as the target domain.  
+   - Example: `--target=Books`
+
+4. **`--neg_samples`** (Required)  
+   - Description: Number of negative items to sample for ranking metrics.  
+   - Example: `--neg_samples=10` or `--neg_samples=20`
+
+5. **`--k_shot`** (Required)  
+   - Description: Percentage of K-Shot training examples to use. (Stick to 25 for this project) 
+   - Example: `--k_shot=25`, `--k_shot=50`, or `--k_shot=75`
+
+6. **`--model_name`** (Required)  
+   - Description: Specify the name of the model to use. The different aruments allowed are:
+      - `7B`: refers to llama-2-7b-chat
+      - `13B`: refers to llama-2-13b-chat
+      - `8B`: refers to llama-3-8b-instruct
+      - `GPT-3.5-turbo`: refers to GPT-3.5-turbo (keep GPT in all-caps)
+      - `GPT-4`: refers to GPT-4 (keep GPT in all-caps)
+      - `GPT-4o`: refers to GPT-4o (keep GPT in all-caps)
+   - Example: `--model_name=7B`, `--model_name 8B`, or  `--model_name=GPT-4o`
+
+7. **`--task`** (Required)  
+   - Description: Specify the task for CDR as either `ranking` or `rating`.  
+   - Example: `--task=rating` or `--task=ranking`
+
+8. **`--injection`** (Required)  
+   - Description: Specify if you want target domain behavior injection with either `with` or `no`.  
+   - Example: `--injection=with` or `--injection=no`
+
+9. **`--prompt_context`** (Required)  
+   - Description: Specify how much context to include in the prompt (either `medium` or `high`).  
+   - Example: `--prompt_context=medium` or `--prompt_context=high`
+
+### Example Usage
