@@ -67,7 +67,7 @@ This project uses the following nine command-line arguments. When running `run.p
       - `GPT-3.5-turbo`: refers to GPT-3.5-turbo (keep GPT in all-caps)
       - `GPT-4`: refers to GPT-4 (keep GPT in all-caps)
       - `GPT-4o`: refers to GPT-4o (keep GPT in all-caps)
-   - Example: `--model_name=7B`, `--model_name 8B`, or  `--model_name=GPT-4o`
+   - Example: `--model_name=7B`, `--model_name 8B`, `--model_name=GPT-4o`, etc.
 
 7. **`--task`** (Required)  
    - Description: Specify the task for CDR as either `ranking` or `rating`.  
