@@ -51,7 +51,7 @@ if __name__ == "__main__":
             # rating_no_target_injection_validation_dataset(args.k_shot, args.source, args.target, args.data_info)
             rating_no_target_injection_test_dataset(args.k_shot, args.source, args.target, args.data_info)
 
-    if args.task == "rankking":
+    if args.task == "ranking":
 
         # Generate target injection ranking task prompts
         if args.injection == "with":
