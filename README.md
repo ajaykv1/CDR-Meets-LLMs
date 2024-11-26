@@ -74,7 +74,7 @@ This project uses the following nine command-line arguments. When running `run.p
    - Example: `--task=rating` or `--task=ranking`
 
 8. **`--injection`** (Required)  
-   - Description: Specify if you want target domain behavior injection with either `with` or `no`.  
+   - Description: Specify if you want target domain behavior injection (either `with` or `no`).  
    - Example: `--injection=with` or `--injection=no`
 
 9. **`--prompt_context`** (Required)  
