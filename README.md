@@ -23,7 +23,7 @@ You will see three main folders and files in this project repository:
      - `ranking_prediction_prompts.py`: Contains all the prompts required for the ranking task in CDR that we use for the LLM.
      - `rating_prediction_prompts.py`: Contains all the prompts required for the rating prediction task in CDR that we use for the LLM. 
      - `evaluate.py`: Evaluates LLama models (llama-2-7b-chat, llama-2-13b-chat, and llama-3-8b-instruct) in rating and ranking tasks.
-     - `gpt_evaluate.py`: Evalures GPT models (GPT-3.5-turbo, GPT-4, and GPT-4o) in the rating and ranking tasks for CDR. 
+     - `gpt_evaluate.py`: Evaluates GPT models (GPT-3.5-turbo, GPT-4, and GPT-4o) in the rating and ranking tasks for CDR. 
      - `run.py`: The most important file that connects all the source files together. You will only need to run this file to get results.
 
  3. **`requirements.txt`**: Contains all the libraries and packages used to run this project. :
