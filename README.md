@@ -87,14 +87,14 @@ Let's say you want to use **`Books`** as the source domain and **`Movies`** as t
 
 To evaluate a GPT model on this domain pair in the ranking task with high context prompt and target domain behavior injection, run the following command:
 
-- `python3 run.py --data_info=amazon --source=Books --target=Movies_and_TV --neg_samples=20 --k_shot=25 --model_name=GPT-4o --task=ranking --injection=no --prompt_context=high`
+- #### `python3 run.py --data_info=amazon --source=Books --target=Movies_and_TV --neg_samples=20 --k_shot=25 --model_name=GPT-4o --task=ranking --injection=no --prompt_context=high`
 - You can change the `neg_samples` argument to evaluate ranking in other ways, and change `--injection` or `prompt_context` to see how it performs in different types of prompt situation.
 - The `k_shot` argument is used to create training data, but for this study, we don't need that functionality. So, keep this value at 25 for faster pre-processing.
 - You can change the `--model_name` to either of the GPT models for the ranking task from the values in the command line arguments section. 
 
 To evaluate a LLama model on this domain pair in the rating task with medium context prompt and no target domain behavior injection, run the following command:
 
-- `python3 run.py --data_info=amazon --source=Books --target=Movies_and_TV --neg_samples=20 --k_shot=25 --model_name=8B --task=rating --injection=no --prompt_context=medium`
+- #### `python3 run.py --data_info=amazon --source=Books --target=Movies_and_TV --neg_samples=20 --k_shot=25 --model_name=8B --task=rating --injection=no --prompt_context=medium`
 - The `neg_samples` argument is required, but you don't have to worry about it for the rating prediction task. The code will not use the value you put for this argument, and will ignore it for rating. But, it is required, so just put some number for this.
 - To evaluate rating prediction in other types of prompts, you can change `--injection` or `prompt_context` to see how it performs in different types of prompt situation.
 - The `k_shot` argument is used to create training data, but for this study, we don't need that functionality. So, keep this value at 25 for faster pre-processing.
